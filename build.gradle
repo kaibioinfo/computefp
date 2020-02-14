@@ -1,8 +1,22 @@
 buildscript {
     repositories {
-        maven { url "https://plugins.gradle.org/m2/" }
         mavenCentral()
         jcenter()
+
+        maven {
+            url "https://bio.informatik.uni-jena.de/repository/libs-oss/"
+        }
+        maven {
+            url "http://www.ebi.ac.uk/Tools/maven/repos/content/groups/ebi-repo/"
+        }
+        maven {
+            url "https://www.xypron.de/repository" //glpk repo
+            //only usede by fragmentation_tree_construction but has to be global
+        }
+        maven {
+            url "http://gose.fiehnlab.ucdavis.edu:55000/content/groups/public"
+            // only used by fingerid_cli for spectral hashs
+        }
     }
 }
 
